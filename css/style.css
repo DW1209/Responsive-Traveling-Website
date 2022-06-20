@@ -1,0 +1,422 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* header */
+header {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand {
+    color: #000;
+    font-size: max(1.5 * (2vw + 1vh) / 2, 1.5em);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #000;
+    font-size: max(0.8 * (2vw + 1vh) / 2, 1em);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+/* section */
+section {
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #000;
+}
+
+.home:before {
+    z-index: 800;
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* video */
+.home video {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+/* content */
+.home .content {
+    z-index: 900;
+    color: #fff;
+    width: 70%;
+    margin-top: 200px;
+    display: none;
+}
+
+.home .content.active {
+    display: block;
+}
+
+.home .content h1 {
+    font-family: 'Fjalla One';
+    font-size: max(4.2 * (2vw + 1vh) / 2, 5em);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* line-height: 75px; */
+    margin-bottom: 40px;
+}
+
+.beach {
+    color: #082540;
+}
+
+.beach-border {
+    border: 2.5px solid #082540;
+}
+
+.camping {
+    color: #013220;
+}
+
+.camping-border {
+    border: 2.5px solid #013220;
+}
+
+.desert {
+    color: #45350e;
+}
+
+.desert-border {
+    border: 2.5px solid #45350e;
+}
+
+.home .content h1 span {
+    font-family: 'Fjalla One';
+}
+
+.home .content a {
+    padding: 15px 35px;
+    font-size: max(0.8 * (2vw + 1vh) / 2, 1.1em);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home .content a i {
+    margin-left: 10px;
+    transition: 0.3s ease;
+}
+
+.home .content a:hover i {
+    transform: translateX(10px);
+}
+
+/* icons */
+.home .media-icons {
+    z-index: 900;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.home .media-icons a {
+    color: #333;
+    font-size: max(1.3 * (2vw + 1vh) / 2, 1.8em);
+    transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.home .media-icons a:hover {
+    transform: scale(1.3);
+}
+
+/* slider */
+.slider-navigation {
+    z-index: 900;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-top: auto;
+    margin-bottom: 12px;
+}
+
+.slider-navigation .nav-button {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-button.active {
+    background: #000;
+}
+
+.slider-navigation .nav-button:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-button:hover {
+    transform: scale(1.2);
+}
+
+/* tablets */
+@media only screen and (max-width: 1200px) {
+    /* header */
+    header {
+        padding: 12px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation.active .navigation-items {
+        background: #FAF9F6;
+        width: 400px;
+        max-width: 400px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgba(1, 1, 1, 0.2);
+    }
+
+    header .navigation .navigation-items a {
+        color: #222;
+        font-size: max(1.5 * (2vw + 1vh) / 2, 1.2em);
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a:before {
+        background: #222;
+        height: 5px;
+    }
+
+    .menu-button {
+        display: block;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-button.active {
+        z-index: 1000;
+        display: block;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    /* section */
+    section {
+        padding: 100px 20px;
+    }
+
+    .home .content a:hover i {
+        transform: translateX(6px);
+    }
+
+    /* icons */
+    .home .media-icons {
+        right: 15px;
+    }
+}
+
+/* phones */
+@media only screen and (max-width: 768px) {
+    /* header */
+    header {
+        padding: 12px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation.active .navigation-items {
+        background: #fAf9f6;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgba(1, 1, 1, 0.2);
+    }
+
+    header .navigation .navigation-items a {
+        color: #222;
+        font-size: max(1.2 * (2vw + 1vh) / 2, 1em);
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a:before {
+        background: #222;
+        height: 5px;
+    }
+
+    .menu-button {
+        display: block;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-button.active {
+        z-index: 1000;
+        display: block;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    /* section */
+    section {
+        padding: 100px 20px;
+    }
+
+    .home .content {
+        margin-top: 100px;
+    }
+
+    .home .content h1 {
+        letter-spacing: 3px;
+        font-size: max(5 * (2vw + 1vh) / 2, 3em);
+        margin-bottom: 20px;
+    }
+
+    .home .content a {
+        padding: 9px 21px;
+        font-size: max(1.3 * (2vw + 1vh) / 2, 0.7em);
+    }
+
+    .home .content a:hover i {
+        transform: translateX(6px);
+    }
+
+    /* icons */
+    .home .media-icons {
+        right: 15px;
+    }
+
+    /* slides */
+    .slider-navigation .nav-button {
+        width: 10px;
+        height: 10px;
+    }
+}
