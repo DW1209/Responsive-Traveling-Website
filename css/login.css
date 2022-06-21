@@ -106,8 +106,8 @@ section .content-box .form-box .remember {
 
 /* login */
 section .content-box .form-box .input-box input[type="submit"] {
-    background: #222;
-    color: #fff;
+    /* background: #222; */
+    /* color: #fff; */
     outline: none;
     font-weight: 500;
     cursor: pointer;
