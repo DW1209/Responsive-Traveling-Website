@@ -97,7 +97,7 @@ section .content-box .form-box .input-box input {
 }
 
 /* register */
-section .content-box .form-box .input-box input[type="submit"] {
+section .content-box .form-box .input-box input[type="button"] {
     /* background: #222; */
     /* color: #fff; */
     outline: none;
@@ -107,7 +107,7 @@ section .content-box .form-box .input-box input[type="submit"] {
     transition: 0.3s ease;
 }
 
-section .content-box .form-box .input-box input[type="submit"]:hover {
+section .content-box .form-box .input-box input[type="button"]:hover {
     transform: translateY(5px);
 }
 
