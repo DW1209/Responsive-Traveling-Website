@@ -1,0 +1,232 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* image */
+section .image-box {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+section .image-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, #555, #000);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+section .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* content */
+section .content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%; 
+}
+
+section .content-box .form-box {
+    width: 50%;
+}
+
+/* title */
+section .content-box .form-box h2 {
+    font-family: 'Fjalla One';
+    color: #000;
+    font-size: max(2.8 * (2vw + 1vh) / 2, 2.8em);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #000;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+/* information */
+section .content-box .form-box .input-box {
+    margin-bottom: 20px;
+}
+
+section .content-box .form-box .input-box span {
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #222;
+    font-weight: 300;
+    font-size: max(0.8 * (2vw + 1vh) / 2, 16px);
+    letter-spacing: 1px;
+}
+
+section .content-box .form-box .input-box input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #222;
+    font-size: max(0.8 * (2vw + 1vh) / 2, 16px);
+    letter-spacing: 1px;
+    color: #222;
+    background: transparent;
+    border-radius: 30px;
+}
+
+/* register */
+section .content-box .form-box .input-box input[type="submit"] {
+    /* background: #222; */
+    /* color: #fff; */
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s ease;
+}
+
+section .content-box .form-box .input-box input[type="submit"]:hover {
+    transform: translateY(5px);
+}
+
+/* login */
+section .content-box .form-box .input-box p {
+    font-size: max(0.8 * (2vw + 1vh) / 2, 16px);
+    color: #222;
+}
+
+section .content-box .form-box .input-box p a {
+    color: #555;
+}
+
+/* social media */
+section .content-box .form-box h3 {
+    color: #000;
+    text-align: center;
+    margin: 80px 0 10px;
+    font-weight: 500;
+    font-size: max(0.9 * (2vw + 1vh) / 2, 1.17em);
+}
+
+section .content-box .form-box .media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .content-box .form-box .media-icons a {
+    text-decoration: none;
+}
+
+section .content-box .form-box .media-icons a li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 28px;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#facebook {
+    background: #4267B2;
+}
+
+#instagram {
+    background: #C13584;
+}
+
+#twitter {
+    background: #1DA1F2;
+}
+
+section .content-box .form-box .media-icons li:hover {
+    transform: scale(1.2);
+}
+
+/* tablets and phones */
+@media only screen and (max-width: 768px) {
+    section .image-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    section .content-box {
+        width: 100%;
+        z-index: 1;
+    }
+
+    section .content-box .form-box {
+        width: 100%;
+        padding: 40px;
+        background: rgba(250, 249, 246, 0.9);
+        border-radius: 20px;
+        margin: 50px;
+        box-shadow: 0 5px 25px rgba(1, 1, 1, 0.5);
+    }
+
+    /* title */
+    section .content-box .form-box h2 {
+        font-size: max(4.2 * (2vw + 1vh) / 2, 1.8em);
+    }
+
+    /* information */
+    section .content-box .form-box .input-box {
+        margin-bottom: 10px;
+    }
+    
+    section .content-box .form-box .input-box span {
+        font-size: max(1.6 * (2vw + 1vh) / 2, 12px);
+    }
+    
+    section .content-box .form-box .input-box input {
+        font-size: max(1.6 * (2vw + 1vh) / 2, 12px);
+    }
+
+    /* login */
+    section .content-box .form-box .input-box p {
+        font-size: max(1.6 * (2vw + 1vh) / 2, 12px);
+    }
+
+    /* social media */
+    section .content-box .form-box h3 {
+        margin: 30px 0 10px;
+        font-size: max(1.8 * (2vw + 1vh) / 2, 14px);
+    }
+
+    section .content-box .form-box .media-icons li {
+        width: 45px;
+        height: 45px;
+        font-size: 26px;
+    }
+}
