@@ -4,15 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register</title>
-        <link rel="icon" type="image/png" href="../static/images/travel.png" />
-        <link rel="stylesheet" href="../static/css/register.css" type="text/css">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/travel.png') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}" type="text/css">
         <script src="https://kit.fontawesome.com/d540eac9df.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <section>
             <!-- image -->
             <div class="image-box">
-                <img src="../static/images/bg-register.jpg" />
+                <img src="{{ url_for('static', filename='images/bg-register.jpg') }}" /> 
             </div>
             
             <!-- content -->
@@ -64,6 +64,6 @@
         </section>
 
         <!-- Javascript -->
-        <script type="text/javascript" src="../static/js/register.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/register.js') }}"></script>
     </body>
 </html>

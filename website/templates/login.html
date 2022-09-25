@@ -4,15 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="icon" type="image/png" href="../static/images/travel.png" />
-        <link rel="stylesheet" href="../static/css/login.css" type="text/css">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/travel.png') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" type="text/css">
         <script src="https://kit.fontawesome.com/d540eac9df.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <section>
             <!-- image -->
             <div class="image-box">
-                <img src="../static/images/bg-login.jpg" />
+                <img src="{{ url_for('static', filename='images/bg-login.jpg') }}" />
             </div>
             
             <!-- content -->
@@ -63,6 +63,6 @@
         </section>
 
         <!-- Javascript -->
-        <script type="text/javascript" src="../static/js/login.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/login.js') }}"></script>
     </body>
 </html>
