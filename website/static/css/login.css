@@ -9,6 +9,15 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* message */
+.alert-danger {
+    background-color: #f8d7da; 
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+}
+
 section {
     position: relative;
     width: 100%;

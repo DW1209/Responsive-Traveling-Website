@@ -9,6 +9,25 @@
         <script src="https://kit.fontawesome.com/d540eac9df.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!-- message -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == 'error' %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-success" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
         <section>
             <!-- image -->
             <div class="image-box">
