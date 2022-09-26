@@ -10,14 +10,25 @@
 }
 
 /* message */
+.alert {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: max(0.8 * (2vw + 1vh) / 2, 16px);
+}
+
 .alert-danger {
+    color: #721c24;
     background-color: #f8d7da; 
 }
 
 .alert-success {
+    color: #155724;
     background-color: #d1e7dd;
 }
 
+/* section */
 section {
     position: relative;
     width: 100%;
@@ -189,6 +200,12 @@ section .content-box .form-box .media-icons li:hover {
 
 /* tablets and phones */
 @media only screen and (max-width: 768px) {
+    /* message */
+    .alert {
+        font-size: max(1.6 * (2vw + 1vh) / 2, 12px);
+    }
+
+    /* section */
     section .image-box {
         position: absolute;
         top: 0;
