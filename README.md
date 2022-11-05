@@ -13,5 +13,6 @@ $ python main.py # Open the browser and enter http://127.0.0.1:5000
 ```
 
 ### References
+* Icons: &nbsp; &nbsp;https://www.flaticon.com/
 * Images: https://unsplash.com/
 * Videos: https://www.pexels.com/zh-tw/
