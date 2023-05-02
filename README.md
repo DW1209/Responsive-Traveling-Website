@@ -1,18 +1,20 @@
 # Responsive Travelling Website
-### Description
-![main page](https://i.imgur.com/xxs1MPu.jpg)
+## Description
+![website](./figures/website.jpg)
 
-### Installation
-```console
+## Installation
+```bash
 $ pip install -r requirements.txt
 ```
 
-### Execution
-```console
-$ python main.py # Open the browser and enter http://127.0.0.1:5000
+## Usage
+Start running the website via the command below.
+```bash
+$ python main.py
 ```
+Open the web broswer and enter http://127.0.0.1:5000.
 
-### References
-* Icons: &nbsp; &nbsp;https://www.flaticon.com/
-* Images: https://unsplash.com/
-* Videos: https://www.pexels.com/zh-tw/
+## References
+- Icons: &nbsp; &nbsp;https://www.flaticon.com/
+- Videos: https://www.pexels.com/zh-tw/
+- Images: https://unsplash.com/
